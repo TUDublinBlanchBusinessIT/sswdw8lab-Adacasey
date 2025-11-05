@@ -22,6 +22,15 @@ class Team
               $this->totalPoints = $this->totalPoints +1;
             }
    }
+   public function getTotalPoints() {
+       return $this-> totalPoints;
+   }
+   public function getGoalAverage() {
+       if ($this->totalGames == 0) {
+           return 0;
+       }
+       return $this->totalGoals/ $this->totalGames;
+   }
 
 }
 ?>
